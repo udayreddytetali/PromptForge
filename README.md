@@ -49,7 +49,7 @@ Category detection uses category-specific text cues. The selector can override a
 
 ## Requirements
 
-- Node.js 20 LTS or later and npm
+- Node.js 24 LTS or later and npm
 - API keys for any provider you want to use; all three are needed for a full three-provider demonstration
 
 ## Local setup (Windows PowerShell)
@@ -135,7 +135,7 @@ sudo apt install -y ca-certificates curl gnupg nginx git
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 sudo chmod a+r /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_24.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 sudo apt update
 sudo apt install -y nodejs
 sudo npm install --global pm2
@@ -150,7 +150,7 @@ Replace the repository URL with your actual GitHub URL. Run as the normal `ubunt
 ```bash
 sudo mkdir -p /var/www/PromptForge
 sudo chown ubuntu:ubuntu /var/www/PromptForge
-git clone https://github.com/YOUR_GITHUB_USERNAME/PromptForge.git /var/www/PromptForge
+git clone https://github.com/udayreddytetali/PromptForge.git /var/www/PromptForge
 cd /var/www/PromptForge
 cp .env.example .env
 chmod 600 .env
